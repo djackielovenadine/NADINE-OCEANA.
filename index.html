@@ -1,0 +1,70 @@
+<!DOCTYPE html>
+<html>
+<head>
+  <title>for my gf, nadine oceana 💗</title>
+  <style>
+    body {
+      text-align: center;
+      background: linear-gradient(#ff9a9e, #fad0c4);
+      font-family: Arial;
+      overflow: hidden;
+    }
+    h1 { color: white; }
+    p { color: white; font-size: 18px; }
+    button {
+      padding: 10px 20px;
+      margin: 10px;
+      background: white;
+      border: none;
+      color: hotpink;
+      border-radius: 10px;
+      cursor: pointer;
+    }
+    .heart {
+      position: fixed;
+      top: -10px;
+      color: red;
+      animation: fall 5s linear infinite;
+    }
+    @keyframes fall {
+      to { transform: translateY(100vh); }
+    }
+  </style>
+</head>
+
+<body>
+  <h1>hai sayangku (nadine oceana) 💌</h1>
+  <p>sayang... makasih ya udah mau jadi pacarnya jaki 🤍</p>
+  <p>jaki beruntung banget bisa ketemu kamu.</p>
+  <p>setiap sama kamu, jaki bisa jadi diri jaki sendiri.</p>
+  <p>kamu bikin hari-hariku jadi lebih seru.</p>
+  <p>dan jujur aja...</p>
+  <p>perasaan ini makin besar sejak kamu perhatian sama jaki 💗</p>
+  <p>jangan tinggalin jaki ya... jaki sayang banget sama kamu</p>
+  <p>tetap jadi pacarnya jaki terus ya?</p>
+
+  <button onclick="alert('iya sayang, aku juga mau terus sama kamu 💗')">YES 💖</button>
+  <button id="no">NO 💔</button>
+
+  <script>
+    const noBtn = document.getElementById("no");
+    noBtn.addEventListener("mouseover", () => {
+      noBtn.style.position = "absolute";
+      noBtn.style.left = Math.random() * window.innerWidth + "px";
+      noBtn.style.top = Math.random() * window.innerHeight + "px";
+    });
+
+    setInterval(() => {
+      const heart = document.createElement("div");
+      heart.classList.add("heart");
+      heart.innerHTML = "💗";
+      heart.style.left = Math.random() * 100 + "vw";
+      document.body.appendChild(heart);
+
+      setTimeout(() => {
+        heart.remove();
+      }, 5000);
+    }, 300);
+  </script>
+</body>
+</html>
